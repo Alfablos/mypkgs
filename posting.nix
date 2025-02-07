@@ -1,4 +1,7 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{
+  pkgs ? import <nixpkgs> { },
+  ...
+}:
 with pkgs.python3Packages;
 
 let
@@ -14,8 +17,9 @@ let
       platformdirs
     ];
     optional-dependencies = {
-      syntax = [ pkgs.tree-sitter ]
-        ++ pkgs.lib.optionals (!tree-sitter-languages.meta.broken) [ tree-sitter-languages ];
+      syntax = [
+        pkgs.tree-sitter
+      ] ++ pkgs.lib.optionals (!tree-sitter-languages.meta.broken) [ tree-sitter-languages ];
     };
     src = fetchPypi {
       inherit version;
@@ -23,24 +27,26 @@ let
       sha256 = "Qwc/nrUtDzilry8SS6aLN4+R0mDfSxyS84Sjtcu7y3A=";
     };
   };
-  textual-autocomplete =
-    buildPythonApplication {
-      pname = "textual-autocomplete";
-      version = "3.0.0a13";
-      build-system = [ poetry-core ];
-      dependencies = [
-        poetry-core
-        hatchling
-        textual
-        typing-extensions
-      ];
-      pyproject = true;
-      # 404 with fetchPypi
-      src = builtins.fetchTarball {
-        # inherit pname version;
-        url = "https://files.pythonhosted.org/packages/bd/d3/7837e2ee1807c72e2a8a185c6e5e729dbe68161d8476055d989f3a2db348/textual_autocomplete-3.0.0a13.tar.gz";
-        sha256 = "0fmmplj85z0z7af76r06c86zp29d921hz9373gc6kmwmqxbi2lfh";
-      };
+  textual-autocomplete = buildPythonApplication {
+    pname = "textual-autocomplete";
+    version = "3.0.0a13";
+    build-system = [ poetry-core ];
+    dependencies = [
+      poetry-core
+      hatchling
+      textual
+      typing-extensions
+    ];
+    pyproject = true;
+    # src = fetchPypi {
+    #   inherit pname version;
+    #   sha256 = "0fmmplj85z0z7af76r06c86zp29d921hz9373gc6kmwmqxbi2lfh";
+    # };
+    # 404 with fetchPypi
+    src = builtins.fetchTarball {
+      url = "https://files.pythonhosted.org/packages/bd/d3/7837e2ee1807c72e2a8a185c6e5e729dbe68161d8476055d989f3a2db348/textual_autocomplete-3.0.0a13.tar.gz";
+      sha256 = "0fmmplj85z0z7af76r06c86zp29d921hz9373gc6kmwmqxbi2lfh";
+    };
   };
 in
 
