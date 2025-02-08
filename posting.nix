@@ -1,4 +1,5 @@
 {
+  # TODO: declare dependencies!
   pkgs ? import <nixpkgs> { },
   ...
 }:
