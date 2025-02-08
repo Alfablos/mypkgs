@@ -1,0 +1,833 @@
+Sourcing auto-add-driver-runpath-hook
+Using autoAddDriverRunpath
+Sourcing fix-elf-files.sh
+Using versionCheckHook
+Running phase: unpackPhase
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking source archive /nix/store/5hwnrm7ym8fbhznld77rdabsf0xri1l1-source
+source root is source
+Executing cargoSetupPostUnpackHook
+Finished cargoSetupPostUnpackHook
+Running phase: patchPhase
+@nix { "action": "setPhase", "phase": "patchPhase" }
+Executing cargoSetupPostPatchHook
+Validating consistency between /build/source/Cargo.lock and /build/cargo-vendor-dir/Cargo.lock
+Finished cargoSetupPostPatchHook
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+Running phase: configurePhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+Running phase: buildPhase
+@nix { "action": "setPhase", "phase": "buildPhase" }
+Executing cargoBuildHook
+cargoBuildHook flags: -j 16 --target x86_64-unknown-linux-gnu --offline --profile release --no-default-features --features=ee\,cuda --package tabby
+[1m[32m   Compiling[0m libc v0.2.169
+[1m[32m   Compiling[0m proc-macro2 v1.0.84
+[1m[32m   Compiling[0m unicode-ident v1.0.12
+[1m[32m   Compiling[0m once_cell v1.19.0
+[1m[32m   Compiling[0m autocfg v1.3.0
+[1m[32m   Compiling[0m cfg-if v1.0.0
+[1m[32m   Compiling[0m serde v1.0.203
+[1m[32m   Compiling[0m version_check v0.9.4
+[1m[32m   Compiling[0m memchr v2.7.2
+[1m[32m   Compiling[0m parking_lot_core v0.9.10
+[1m[32m   Compiling[0m log v0.4.21
+[1m[32m   Compiling[0m smallvec v1.13.2
+[1m[32m   Compiling[0m scopeguard v1.2.0
+[1m[32m   Compiling[0m pin-project-lite v0.2.14
+[1m[32m   Compiling[0m itoa v1.0.11
+[1m[32m   Compiling[0m futures-core v0.3.30
+[1m[32m   Compiling[0m bytes v1.6.0
+[1m[32m   Compiling[0m futures-sink v0.3.30
+[1m[32m   Compiling[0m thiserror v1.0.61
+[1m[32m   Compiling[0m zerocopy v0.7.34
+[1m[32m   Compiling[0m futures-io v0.3.30
+[1m[32m   Compiling[0m futures-channel v0.3.30
+[1m[32m   Compiling[0m futures-task v0.3.30
+[1m[32m   Compiling[0m allocator-api2 v0.2.18
+[1m[32m   Compiling[0m pin-utils v0.1.0
+[1m[32m   Compiling[0m pkg-config v0.3.30
+[1m[32m   Compiling[0m tracing-core v0.1.32
+[1m[32m   Compiling[0m serde_json v1.0.117
+[1m[32m   Compiling[0m lock_api v0.4.12
+[1m[32m   Compiling[0m slab v0.4.9
+[1m[32m   Compiling[0m syn v1.0.109
+[1m[32m   Compiling[0m libm v0.2.8
+[1m[32m   Compiling[0m ahash v0.8.11
+[1m[32m   Compiling[0m regex-syntax v0.8.3
+[1m[32m   Compiling[0m typenum v1.17.0
+[1m[32m   Compiling[0m fnv v1.0.7
+[1m[32m   Compiling[0m generic-array v0.14.7
+[1m[32m   Compiling[0m num-traits v0.2.19
+[1m[32m   Compiling[0m aho-corasick v1.1.3
+[1m[32m   Compiling[0m equivalent v1.0.1
+[1m[32m   Compiling[0m ppv-lite86 v0.2.17
+[1m[32m   Compiling[0m percent-encoding v2.3.1
+[1m[32m   Compiling[0m ryu v1.0.18
+[1m[32m   Compiling[0m subtle v2.5.0
+[1m[32m   Compiling[0m vcpkg v0.2.15
+[1m[32m   Compiling[0m quote v1.0.36
+[1m[32m   Compiling[0m crossbeam-utils v0.8.20
+[1m[32m   Compiling[0m tinyvec_macros v0.1.1
+[1m[32m   Compiling[0m tinyvec v1.6.0
+[1m[32m   Compiling[0m http v1.1.0
+[1m[32m   Compiling[0m syn v2.0.66
+[1m[32m   Compiling[0m form_urlencoded v1.2.1
+[1m[32m   Compiling[0m unicode-bidi v0.3.15
+[1m[32m   Compiling[0m byteorder v1.5.0
+[1m[32m   Compiling[0m indexmap v1.9.3
+[1m[32m   Compiling[0m tower-service v0.3.3
+[1m[32m   Compiling[0m httparse v1.8.0
+[1m[32m   Compiling[0m hashbrown v0.12.3
+[1m[32m   Compiling[0m rustversion v1.0.17
+[1m[32m   Compiling[0m jobserver v0.1.31
+[1m[32m   Compiling[0m unicode-normalization v0.1.23
+[1m[32m   Compiling[0m getrandom v0.2.15
+[1m[32m   Compiling[0m cc v1.0.98
+[1m[32m   Compiling[0m parking_lot v0.12.3
+[1m[32m   Compiling[0m num_cpus v1.16.0
+[1m[32m   Compiling[0m signal-hook-registry v1.4.2
+[1m[32m   Compiling[0m socket2 v0.5.7
+[1m[32m   Compiling[0m hashbrown v0.14.5
+[1m[32m   Compiling[0m mio v0.8.11
+[1m[32m   Compiling[0m rand_core v0.6.4
+[1m[32m   Compiling[0m regex-automata v0.4.6
+[1m[32m   Compiling[0m idna v0.5.0
+[1m[32m   Compiling[0m rand_chacha v0.3.1
+[1m[32m   Compiling[0m rand v0.8.5
+[1m[32m   Compiling[0m http-body v1.0.0
+[1m[32m   Compiling[0m httpdate v1.0.3
+[1m[32m   Compiling[0m bitflags v2.6.0
+[1m[32m   Compiling[0m tower-layer v0.3.3
+[1m[32m   Compiling[0m try-lock v0.2.5
+[1m[32m   Compiling[0m cpufeatures v0.2.12
+[1m[32m   Compiling[0m atomic-waker v1.1.2
+[1m[32m   Compiling[0m want v0.3.1
+[1m[32m   Compiling[0m utf-8 v0.7.6
+[1m[32m   Compiling[0m spin v0.9.8
+[1m[32m   Compiling[0m siphasher v0.3.11
+[1m[32m   Compiling[0m http-body-util v0.1.1
+[1m[32m   Compiling[0m tree-sitter v0.22.6
+[1m[32m   Compiling[0m openssl-sys v0.9.102
+[1m[32m   Compiling[0m ring v0.17.8
+[1m[32m   Compiling[0m crypto-common v0.1.6
+[1m[32m   Compiling[0m block-buffer v0.10.4
+[1m[32m   Compiling[0m anyhow v1.0.86
+[1m[32m   Compiling[0m mime v0.3.17
+[1m[32m   Compiling[0m digest v0.10.7
+[1m[32m   Compiling[0m ident_case v1.0.1
+[1m[32m   Compiling[0m rustls-pki-types v1.10.0
+[1m[32m   Compiling[0m base64 v0.22.1
+[1m[32m   Compiling[0m lazy_static v1.4.0
+[1m[32m   Compiling[0m sync_wrapper v0.1.2
+[1m[32m   Compiling[0m num-conv v0.1.0
+[1m[32m   Compiling[0m openssl-probe v0.1.5
+[1m[32m   Compiling[0m untrusted v0.9.0
+[1m[32m   Compiling[0m time-core v0.1.2
+[1m[32m   Compiling[0m unicase v2.7.0
+[1m[32m   Compiling[0m zeroize v1.8.1
+[1m[32m   Compiling[0m time-macros v0.2.18
+[1m[32m   Compiling[0m minimal-lexical v0.2.1
+[1m[32m   Compiling[0m iana-time-zone v0.1.60
+[1m[32m   Compiling[0m crossbeam-epoch v0.9.18
+[1m[32m   Compiling[0m rustix v0.38.34
+[1m[32m   Compiling[0m nom v7.1.3
+[1m[32m   Compiling[0m paste v1.0.15
+[1m[32m   Compiling[0m getrandom v0.1.16
+[1m[32m   Compiling[0m base64 v0.21.7
+[1m[32m   Compiling[0m sha1 v0.10.6
+[1m[32m   Compiling[0m openssl v0.10.64
+[1m[32m   Compiling[0m powerfmt v0.2.0
+[1m[32m   Compiling[0m foreign-types-shared v0.1.1
+[1m[32m   Compiling[0m strsim v0.11.1
+[1m[32m   Compiling[0m sync_wrapper v1.0.1
+[1m[32m   Compiling[0m foreign-types v0.3.2
+[1m[32m   Compiling[0m darling_core v0.20.9
+[1m[32m   Compiling[0m axum-core v0.4.3
+[1m[32m   Compiling[0m encoding_rs v0.8.34
+[1m[32m   Compiling[0m static_assertions v1.1.0
+[1m[32m   Compiling[0m data-encoding v2.6.0
+[1m[32m   Compiling[0m num_threads v0.1.7
+[1m[32m   Compiling[0m native-tls v0.2.12
+[1m[32m   Compiling[0m stable_deref_trait v1.2.0
+[1m[32m   Compiling[0m mime_guess v2.0.4
+[1m[32m   Compiling[0m rand_core v0.5.1
+[1m[32m   Compiling[0m crossbeam-deque v0.8.5
+[1m[32m   Compiling[0m regex v1.10.4
+[1m[32m   Compiling[0m axum v0.7.5
+[1m[32m   Compiling[0m rayon-core v1.12.1
+[1m[32m   Compiling[0m rustls v0.22.4
+[1m[32m   Compiling[0m unicode-segmentation v1.11.0
+[1m[32m   Compiling[0m matchit v0.7.3
+[1m[32m   Compiling[0m heck v0.4.1
+[1m[32m   Compiling[0m rand_pcg v0.2.1
+[1m[32m   Compiling[0m rand_chacha v0.2.2
+[1m[32m   Compiling[0m phf_shared v0.10.0
+[1m[32m   Compiling[0m zstd-sys v2.0.10+zstd.1.5.6
+[1m[32m   Compiling[0m serde_derive v1.0.203
+[1m[32m   Compiling[0m futures-macro v0.3.30
+[1m[32m   Compiling[0m tokio-macros v2.2.0
+[1m[32m   Compiling[0m thiserror-impl v1.0.61
+[1m[32m   Compiling[0m tracing-attributes v0.1.27
+[1m[32m   Compiling[0m async-trait v0.1.80
+[1m[32m   Compiling[0m pin-project-internal v1.1.5
+[1m[32m   Compiling[0m openssl-macros v0.1.1
+[1m[32m   Compiling[0m tokio v1.37.0
+[1m[32m   Compiling[0m futures-util v0.3.30
+[1m[32m   Compiling[0m darling_macro v0.20.9
+[1m[32m   Compiling[0m proc-macro-error-attr v1.0.4
+[1m[32m   Compiling[0m ipnet v2.9.0
+[1m[32m   Compiling[0m pin-project v1.1.5
+[1m[32m   Compiling[0m phf_generator v0.10.0
+[1m[32m   Compiling[0m darling v0.20.9
+[1m[32m   Compiling[0m tracing v0.1.40
+[1m[32m   Compiling[0m rand v0.7.3
+[1m[32m   Compiling[0m rustls-pemfile v2.1.2
+[1m[32m   Compiling[0m phf_shared v0.8.0
+[1m[32m   Compiling[0m proc-macro-error v1.0.4
+[1m[32m   Compiling[0m crunchy v0.2.2
+[1m[32m   Compiling[0m phf_generator v0.8.0
+[1m[32m   Compiling[0m rustls-native-certs v0.7.0
+[1m[32m   Compiling[0m string_cache_codegen v0.5.2
+[1m[32m   Compiling[0m async-stream-impl v0.3.5
+[1m[32m   Compiling[0m webpki-roots v0.26.3
+[1m[32m   Compiling[0m instant v0.1.13
+[1m[32m   Compiling[0m zstd-safe v7.1.0
+[1m[32m   Compiling[0m ownedbytes v0.7.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m crossbeam-channel v0.5.13
+[1m[32m   Compiling[0m memmap2 v0.9.4
+[1m[32m   Compiling[0m new_debug_unreachable v1.0.6
+[1m[32m   Compiling[0m async-stream v0.3.5
+[1m[32m   Compiling[0m linux-raw-sys v0.4.14
+[1m[32m   Compiling[0m futures-executor v0.3.30
+[1m[32m   Compiling[0m futures v0.3.30
+[1m[32m   Compiling[0m sha2 v0.10.8
+[1m[32m   Compiling[0m bitpacking v0.9.2
+[1m[32m   Compiling[0m derive_builder_core v0.20.0
+[1m[32m   Compiling[0m libsqlite3-sys v0.27.0
+[1m[32m   Compiling[0m tokio-util v0.7.11
+[1m[32m   Compiling[0m tokio-stream v0.1.17
+[1m[32m   Compiling[0m tokio-native-tls v0.3.1
+[1m[32m   Compiling[0m utf8-ranges v1.0.5
+[1m[32m   Compiling[0m mac v0.1.1
+[1m[32m   Compiling[0m precomputed-hash v0.1.1
+[1m[32m   Compiling[0m tantivy-fst v0.5.0
+[1m[32m   Compiling[0m derive_builder_macro v0.20.0
+[1m[32m   Compiling[0m futf v0.1.5
+[1m[32m   Compiling[0m tower v0.4.13
+[1m[32m   Compiling[0m uuid-macro-internal v1.8.0
+[1m[32m   Compiling[0m either v1.12.0
+[1m[32m   Compiling[0m indexmap v2.2.6
+[1m[32m   Compiling[0m url v2.5.0
+[1m[32m   Compiling[0m serde_urlencoded v0.7.1
+[1m[32m   Compiling[0m chrono v0.4.38
+[1m[32m   Compiling[0m rustls-webpki v0.102.8
+[1m[32m   Compiling[0m deranged v0.3.11
+[1m[32m   Compiling[0m h2 v0.4.5
+[1m[32m   Compiling[0m tungstenite v0.21.0
+[1m[32m   Compiling[0m serde_path_to_error v0.1.16
+[1m[32m   Compiling[0m time v0.3.36
+[1m[32m   Compiling[0m tokio-tungstenite v0.21.0
+[1m[32m   Compiling[0m rayon v1.10.0
+[1m[32m   Compiling[0m sketches-ddsketch v0.2.2
+[1m[32m   Compiling[0m itertools v0.13.0
+[1m[32m   Compiling[0m tantivy-common v0.7.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m toml_datetime v0.6.6
+[1m[32m   Compiling[0m serde_spanned v0.6.6
+[1m[32m   Compiling[0m rand_distr v0.4.3
+[1m[32m   Compiling[0m tokio-rustls v0.25.0
+[1m[32m   Compiling[0m murmurhash32 v0.3.1
+[1m[32m   Compiling[0m winnow v0.5.40
+[1m[32m   Compiling[0m proc-macro-hack v0.5.20+deprecated
+[1m[32m   Compiling[0m fastrand v2.1.0
+[1m[32m   Compiling[0m tantivy-stacker v0.3.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m string_cache v0.8.7
+[1m[32m   Compiling[0m utoipa-gen v4.3.0
+[1m[32m   Compiling[0m uuid v1.8.0
+[1m[32m   Compiling[0m derive_builder v0.20.0
+[1m[32m   Compiling[0m tendril v0.4.3
+[1m[32m   Compiling[0m phf_codegen v0.8.0
+[1m[32m   Compiling[0m trackable_derive v1.0.0
+[1m[32m   Compiling[0m lexical-util v0.8.5
+[1m[32m   Compiling[0m rmp v0.8.14
+[1m[32m   Compiling[0m phf_shared v0.11.2
+[1m[32m   Compiling[0m hyper v1.3.1
+[1m[32m   Compiling[0m headers-core v0.3.0
+[1m[32m   Compiling[0m home v0.5.9
+[1m[32m   Compiling[0m fastdivide v0.4.1
+[1m[32m   Compiling[0m arc-swap v1.7.1
+[1m[32m   Compiling[0m downcast-rs v1.2.1
+[1m[32m   Compiling[0m trackable v1.3.0
+[1m[32m   Compiling[0m toml_edit v0.19.15
+[1m[32m   Compiling[0m rmp-serde v1.3.0
+[1m[32m   Compiling[0m headers v0.4.0
+[1m[32m   Compiling[0m phf_generator v0.11.2
+[1m[32m   Compiling[0m tempfile v3.10.1
+[1m[32m   Compiling[0m hyper-util v0.1.5
+[1m[32m   Compiling[0m itertools v0.12.1
+[1m[32m   Compiling[0m hyper-rustls v0.26.0
+[1m[32m   Compiling[0m hyper-tls v0.6.0
+[1m[32m   Compiling[0m reqwest v0.12.4
+[1m[32m   Compiling[0m tantivy-bitpacker v0.6.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m toml v0.7.8
+[1m[32m   Compiling[0m tantivy-tokenizer-api v0.3.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m rust-stemmers v1.2.0
+[1m[32m   Compiling[0m fs4 v0.8.3
+[1m[32m   Compiling[0m measure_time v0.8.3
+[1m[32m   Compiling[0m tantivy-query-grammar v0.22.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m bstr v1.9.1
+[1m[32m   Compiling[0m libz-sys v1.1.18
+[1m[32m   Compiling[0m utoipa v4.2.3
+[1m[32m   Compiling[0m lru v0.12.3
+[1m[32m   Compiling[0m crc32fast v1.4.2
+[1m[32m   Compiling[0m levenshtein_automata v0.2.1
+[1m[32m   Compiling[0m oneshot v0.1.6 (https://github.com/fulmicoton/oneshot.git?rev=b208f49#b208f493)
+[1m[32m   Compiling[0m rustc-hash v1.1.0
+[1m[32m   Compiling[0m regex-syntax v0.6.29
+[1m[32m   Compiling[0m crc-catalog v2.4.0
+[1m[32m   Compiling[0m unicode_categories v0.1.1
+[1m[32m   Compiling[0m htmlescape v0.3.1
+[1m[32m   Compiling[0m lz4_flex v0.11.3
+[1m[32m   Compiling[0m hash-ids v0.23.0 (/build/source/crates/hash-ids)
+[1m[32m   Compiling[0m census v0.4.2
+[1m[32m   Compiling[0m sqlformat v0.2.3
+[1m[32m   Compiling[0m crc v3.2.1
+[1m[32m   Compiling[0m axum-extra v0.9.3
+[1m[32m   Compiling[0m serdeconv v0.4.1
+[1m[32m   Compiling[0m regex-automata v0.1.10
+[1m[32m   Compiling[0m phf_macros v0.8.0
+[1m[32m   Compiling[0m phf_codegen v0.11.2
+[1m[32m   Compiling[0m crossbeam-queue v0.3.11
+[1m[32m   Compiling[0m hashlink v0.8.4
+[1m[32m   Compiling[0m atoi v2.0.0
+[1m[32m   Compiling[0m fid-rs v0.1.1
+[1m[32m   Compiling[0m parse-git-url v0.5.1
+[1m[32m   Compiling[0m futures-intrusive v0.5.0
+[1m[32m   Compiling[0m eventsource-stream v0.2.3
+[1m[32m   Compiling[0m derive_utils v0.14.1
+[1m[32m   Compiling[0m event-listener v2.5.3
+[1m[32m   Compiling[0m overload v0.1.1
+[1m[32m   Compiling[0m hex v0.4.3
+[1m[32m   Compiling[0m futures-timer v3.0.3
+[1m[32m   Compiling[0m nu-ansi-term v0.46.0
+[1m[32m   Compiling[0m sqlx-core v0.7.4 (https://github.com/wsxiaoys/sqlx?rev=8ca573c#8ca573cc)
+[1m[32m   Compiling[0m reqwest-eventsource v0.6.0
+[1m[32m   Compiling[0m auto_enums v0.8.5
+[1m[32m   Compiling[0m phf v0.8.0
+[1m[32m   Compiling[0m flume v0.11.0
+[1m[32m   Compiling[0m matchers v0.1.0
+[1m[32m   Compiling[0m louds-rs v0.4.0
+[1m[32m   Compiling[0m markup5ever v0.12.1
+[1m[32m   Compiling[0m lexical-write-integer v0.8.5
+[1m[32m   Compiling[0m lexical-parse-integer v0.8.6
+[1m[32m   Compiling[0m secrecy v0.8.0
+[1m[32m   Compiling[0m backoff v0.4.0
+[1m[32m   Compiling[0m async-convert v1.0.0
+[1m[32m   Compiling[0m sharded-slab v0.1.7
+[1m[32m   Compiling[0m libssh2-sys v0.3.0
+[1m[32m   Compiling[0m tracing-log v0.2.0
+[1m[32m   Compiling[0m smartstring v1.0.1
+[1m[32m   Compiling[0m thread_local v1.1.8
+[1m[32m   Compiling[0m void v1.0.2
+[1m[32m   Compiling[0m ref-cast v1.0.23
+[1m[32m   Compiling[0m heck v0.5.0
+[1m[32m   Compiling[0m strsim v0.10.0
+[1m[32m   Compiling[0m same-file v1.0.6
+[1m[32m   Compiling[0m urlencoding v2.1.3
+[1m[32m   Compiling[0m darling_core v0.14.4
+[1m[32m   Compiling[0m walkdir v2.5.0
+[1m[32m   Compiling[0m tracing-subscriber v0.3.18
+[1m[32m   Compiling[0m unreachable v1.0.0
+[1m[32m   Compiling[0m phf v0.11.2
+[1m[32m   Compiling[0m async-openai v0.20.0
+[1m[32m   Compiling[0m lexical-parse-float v0.8.5
+[1m[32m   Compiling[0m lexical-write-float v0.8.5
+[1m[32m   Compiling[0m trie-rs v0.1.1
+[1m[32m   Compiling[0m markup5ever v0.10.1
+[1m[32m   Compiling[0m halfbrown v0.2.5
+[1m[32m   Compiling[0m ref-cast-impl v1.0.23
+[1m[32m   Compiling[0m cssparser v0.27.2
+[1m[32m   Compiling[0m backtrace v0.3.71
+[1m[32m   Compiling[0m dashmap v5.5.3
+[1m[32m   Compiling[0m float-cmp v0.9.0
+[1m[32m   Compiling[0m dtoa v1.0.9
+[1m[32m   Compiling[0m adler v1.0.2
+[1m[32m   Compiling[0m gimli v0.28.1
+[1m[32m   Compiling[0m dotenvy v0.15.7
+[1m[32m   Compiling[0m unicode-width v0.1.12
+[1m[32m   Compiling[0m ucd-trie v0.1.6
+[1m[32m   Compiling[0m ascii v0.9.3
+[1m[32m   Compiling[0m pest v2.7.10
+[1m[32m   Compiling[0m console v0.15.8
+[1m[32m   Compiling[0m combine v3.8.1
+[1m[32m   Compiling[0m sqlx-sqlite v0.7.4 (https://github.com/wsxiaoys/sqlx?rev=8ca573c#8ca573cc)
+[1m[32m   Compiling[0m darling_macro v0.14.4
+[1m[32m   Compiling[0m dtoa-short v0.3.4
+[1m[32m   Compiling[0m miniz_oxide v0.7.3
+[1m[32m   Compiling[0m value-trait v0.8.1
+[1m[32m   Compiling[0m lexical-core v0.8.5
+[1m[32m   Compiling[0m sqlx-macros-core v0.7.4 (https://github.com/wsxiaoys/sqlx?rev=8ca573c#8ca573cc)
+[1m[32m   Compiling[0m addr2line v0.21.0
+[1m[32m   Compiling[0m globset v0.4.14
+[1m[32m   Compiling[0m selectors v0.22.0
+[1m[32m   Compiling[0m juniper_codegen v0.16.0
+[1m[32m   Compiling[0m cssparser-macros v0.6.1
+[1m[32m   Compiling[0m html5ever v0.27.0
+[1m[32m   Compiling[0m html5ever v0.25.2
+[1m[32m   Compiling[0m psm v0.1.21
+[1m[32m   Compiling[0m libgit2-sys v0.16.2+1.7.2
+[1m[32m   Compiling[0m object v0.32.2
+[1m[32m   Compiling[0m grep-matcher v0.1.7
+[1m[32m   Compiling[0m rustls v0.23.20
+[1m[32m   Compiling[0m simdutf8 v0.1.4
+[1m[32m   Compiling[0m rustc-demangle v0.1.24
+[1m[32m   Compiling[0m bitflags v1.3.2
+[1m[32m   Compiling[0m nodrop v0.1.14
+[1m[32m   Compiling[0m utf8parse v0.2.1
+[1m[32m   Compiling[0m itoa v0.4.8
+[1m[32m   Compiling[0m matches v0.1.10
+[1m[32m   Compiling[0m convert_case v0.4.0
+[1m[32m   Compiling[0m derive_more v0.99.17
+[1m[32m   Compiling[0m anstyle-parse v0.2.4
+[1m[32m   Compiling[0m servo_arc v0.1.1
+[1m[32m   Compiling[0m simd-json v0.13.10
+[1m[32m   Compiling[0m sqlx-macros v0.7.4 (https://github.com/wsxiaoys/sqlx?rev=8ca573c#8ca573cc)
+[1m[32m   Compiling[0m graphql-parser v0.4.0
+[1m[32m   Compiling[0m pest_meta v2.7.10
+[1m[32m   Compiling[0m darling v0.14.4
+[1m[32m   Compiling[0m hyper-timeout v0.5.1
+[1m[32m   Compiling[0m graphql-introspection-query v0.2.0
+[1m[32m   Compiling[0m opentelemetry_api v0.18.0
+[1m[32m   Compiling[0m encoding_rs_io v0.1.7
+[1m[32m   Compiling[0m stacker v0.1.15
+[1m[32m   Compiling[0m num-integer v0.1.46
+[1m[32m   Compiling[0m fxhash v0.2.1
+[1m[32m   Compiling[0m encoder-ryu v1.0.16
+[1m[32m   Compiling[0m thin-slice v0.1.1
+[1m[32m   Compiling[0m anstyle-query v1.0.3
+[1m[32m   Compiling[0m is_terminal_polyfill v1.70.0
+[1m[32m   Compiling[0m portable-atomic v1.6.0
+[1m[32m   Compiling[0m termcolor v1.4.1
+[1m[32m   Compiling[0m colorchoice v1.0.1
+[1m[32m   Compiling[0m anstyle v1.0.7
+[1m[32m   Compiling[0m prost-derive v0.13.4
+[1m[32m   Compiling[0m graphql_client_codegen v0.14.0
+[1m[32m   Compiling[0m num-bigint v0.4.5
+[1m[32m   Compiling[0m anstream v0.6.14
+[1m[32m   Compiling[0m juniper v0.16.1
+[1m[32m   Compiling[0m encoder v0.2.4
+[1m[32m   Compiling[0m flate2 v1.0.30
+[1m[32m   Compiling[0m opentelemetry_sdk v0.18.0
+[1m[32m   Compiling[0m grep-searcher v0.1.13
+[1m[32m   Compiling[0m pest_generator v2.7.10
+[1m[32m   Compiling[0m cached_proc_macro v0.20.0
+[1m[32m   Compiling[0m rust-embed-utils v8.4.0
+[1m[32m   Compiling[0m xml5ever v0.18.0
+[1m[32m   Compiling[0m opentelemetry v0.27.1
+[1m[32m   Compiling[0m strum_macros v0.26.2
+[1m[32m   Compiling[0m strum_macros v0.24.3
+[1m[32m   Compiling[0m vergen v8.3.1
+[1m[32m   Compiling[0m tree-sitter-typescript v0.21.1
+[1m[32m   Compiling[0m tree-sitter-elixir v0.2.0
+[1m[32m   Compiling[0m tree-sitter-ruby v0.21.0
+[1m[32m   Compiling[0m tree-sitter-c-sharp v0.21.2
+[1m[32m   Compiling[0m tree-sitter-kotlin v0.3.6
+[1m[32m   Compiling[0m tree-sitter-java v0.21.0
+[1m[32m   Compiling[0m tree-sitter-c v0.21.3 (https://github.com/tree-sitter/tree-sitter-c/?rev=00ed08f#00ed08f1)
+[1m[32m   Compiling[0m tree-sitter-python v0.21.0
+[1m[32m   Compiling[0m tree-sitter-lua v0.1.0
+[1m[32m   Compiling[0m tree-sitter-cpp v0.22.1 (https://github.com/tree-sitter/tree-sitter-cpp?rev=d29fbff#d29fbff0)
+[1m[32m   Compiling[0m tree-sitter-rust v0.21.2
+[1m[32m   Compiling[0m tree-sitter-solidity v1.2.6 (https://github.com/JoranHonig/tree-sitter-solidity?rev=0e86ae647bda22c9bee00ec59752df7b3d3b000b#0e86ae64)
+[1m[32m   Compiling[0m tree-sitter-go v0.21.0
+[1m[32m   Compiling[0m raw-cpuid v11.0.2
+[1m[32m   Compiling[0m http v0.2.12
+[1m[32m   Compiling[0m build-target v0.4.0
+[1m[32m   Compiling[0m cached_proc_macro_types v0.1.1
+[1m[32m   Compiling[0m fs_extra v1.3.0
+[1m[32m   Compiling[0m clap_lex v0.7.0
+[1m[32m   Compiling[0m project-root v0.2.2
+[1m[32m   Compiling[0m glob v0.3.1
+[1m[32m   Compiling[0m omnicopy_to_output v0.1.1
+[1m[32m   Compiling[0m juniper_subscriptions v0.17.0
+[1m[32m   Compiling[0m http-body v0.4.6
+[1m[32m   Compiling[0m opentelemetry_sdk v0.27.1
+[1m[32m   Compiling[0m clap_builder v4.5.2
+[1m[32m   Compiling[0m tokio-rustls v0.26.1
+[1m[32m   Compiling[0m quanta v0.12.3
+[1m[32m   Compiling[0m cached v0.49.3
+[1m[32m   Compiling[0m graphql_query_derive v0.14.0
+[1m[32m   Compiling[0m strum v0.24.1
+[1m[32m   Compiling[0m strum v0.26.2
+[1m[32m   Compiling[0m markup5ever_rcdom v0.3.0
+[1m[32m   Compiling[0m kuchiki v0.8.1
+[1m[32m   Compiling[0m pest_derive v2.7.10
+[1m[32m   Compiling[0m prost v0.13.4
+[1m[32m   Compiling[0m rust-embed-impl v8.4.0
+[1m[32m   Compiling[0m simple_asn1 v0.6.2
+[1m[32m   Compiling[0m opentelemetry v0.18.0
+[1m[32m   Compiling[0m grep-printer v0.2.1
+[1m[32m   Compiling[0m zip v0.6.6
+[1m[32m   Compiling[0m logkit v0.3.5
+[1m[32m   Compiling[0m grep-cli v0.1.10
+[1m[32m   Compiling[0m nucleo-matcher v0.3.1
+[1m[32m   Compiling[0m grep-regex v0.1.12
+[1m[32m   Compiling[0m ignore v0.4.22
+[1m[32m   Compiling[0m snafu-derive v0.8.3
+[1m[32m   Compiling[0m clap_derive v4.5.4
+[1m[32m   Compiling[0m ollama-rs v0.1.9 (https://github.com/pepperoni21/ollama-rs.git?rev=56e8157d98d4185bc171fe9468d3d09bc56e9dd3#56e8157d)
+[1m[32m   Compiling[0m tower v0.5.2
+[1m[32m   Compiling[0m validator_derive v0.18.1
+[1m[32m   Compiling[0m zstd v0.13.1
+[1m[32m   Compiling[0m tabby-db-macros v0.23.0 (/build/source/ee/tabby-db-macros)
+[1m[32m   Compiling[0m rustls-native-certs v0.8.1
+[1m[32m   Compiling[0m pem v3.0.4
+[1m[32m   Compiling[0m tantivy-sstable v0.3.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m cmake v0.1.50
+[1m[32m   Compiling[0m metrics v0.22.3
+[1m[32m   Compiling[0m tantivy-columnar v0.3.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m iri-string v0.7.2
+[1m[32m   Compiling[0m base64ct v1.6.0
+[1m[32m   Compiling[0m sql_query_builder v2.2.0
+[1m[32m   Compiling[0m eyre v0.6.12
+[1m[32m   Compiling[0m linked-hash-map v0.5.6
+[1m[32m   Compiling[0m number_prefix v0.4.0
+[1m[32m   Compiling[0m similar v2.5.0
+[1m[32m   Compiling[0m indicatif v0.17.8
+[1m[32m   Compiling[0m clap v4.5.4
+[1m[32m   Compiling[0m snafu v0.8.3
+[1m[32m   Compiling[0m password-hash v0.5.0
+[1m[32m   Compiling[0m validator v0.18.1
+[1m[32m   Compiling[0m tantivy v0.23.0 (https://github.com/quickwit-oss/tantivy?rev=4143d31#4143d318)
+[1m[32m   Compiling[0m tower-http v0.6.2
+[1m[32m   Compiling[0m insta v1.39.0
+[1m[32m   Compiling[0m llama-cpp-server v0.23.0 (/build/source/crates/llama-cpp-server)
+[1m[32m   Compiling[0m metrics-util v0.16.3
+[1m[32m   Compiling[0m jsonwebtoken v9.3.0
+[1m[32m   Compiling[0m hyper-rustls v0.27.3
+[1m[32m   Compiling[0m rust-embed v8.4.0
+[1m[32m   Compiling[0m nucleo v0.5.0
+[1m[32m   Compiling[0m grep v0.3.1
+[1m[32m   Compiling[0m utoipa-swagger-ui v6.0.0
+[1m[32m   Compiling[0m tonic v0.12.3
+[1m[32m   Compiling[0m tracing-opentelemetry v0.18.0
+[1m[32m   Compiling[0m chumsky v0.9.3
+[1m[32m   Compiling[0m readable-readability v0.4.0
+[1m[32m   Compiling[0m htmd v0.1.0
+[1m[32m   Compiling[0m graphql_client v0.14.0
+[1m[32m   Compiling[0m text-splitter v0.13.3
+[1m[32m   Compiling[0m hyper v0.14.28
+[1m[32m   Compiling[0m juniper_graphql_ws v0.4.0
+[1m[32m   Compiling[0m tracing-error v0.2.0
+[1m[32m   Compiling[0m tree-sitter-tags v0.22.6
+[1m[32m   Compiling[0m clocksource v0.8.1
+[1m[32m   Compiling[0m cron v0.12.1
+[1m[32m   Compiling[0m leaky-bucket v1.1.2
+[1m[32m   Compiling[0m tokio-serde v0.8.0
+[1m[32m   Compiling[0m tarpc-plugins v0.12.0
+[1m[32m   Compiling[0m url-parse v1.0.8
+[1m[32m   Compiling[0m secrecy v0.10.3
+[1m[32m   Compiling[0m email-encoding v0.3.0
+[1m[32m   Compiling[0m blake2 v0.10.6
+[1m[32m   Compiling[0m hostname v0.4.0
+[1m[32m   Compiling[0m libloading v0.7.4
+[1m[32m   Compiling[0m tabby-common v0.23.0 (/build/source/crates/tabby-common)
+[1m[32m   Compiling[0m web-time v1.1.0
+[1m[32m   Compiling[0m humantime v2.1.0
+[0m[1m[33mwarning[0m[0m[1m: value assigned to `cfg` is never read[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/tabby-common/src/config.rs:69:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            cfg = Default::default();[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m             [0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: maybe it is overwritten before being read?[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_assignments)]` on by default[0m
+
+[1m[32m   Compiling[0m netrc v0.4.1
+[1m[32m   Compiling[0m owo-colors v3.5.0
+[1m[32m   Compiling[0m indenter v0.3.3
+[1m[32m   Compiling[0m quoted_printable v0.5.0
+[1m[32m   Compiling[0m strfmt v0.2.4
+[1m[32m   Compiling[0m tabby-inference v0.23.0 (/build/source/crates/tabby-inference)
+[0m[1m[33mwarning[0m[0m[1m: elided lifetime has a name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/tabby-inference/src/completion.rs:21:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    async fn generate(&self, prompt: &str, options: CompletionOptions) -> BoxStream<String>;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mlifetime `'life0` declared here[0m[0m                            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mthis elided lifetime gets resolved as `'life0`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(elided_named_lifetimes)]` on by default[0m
+
+[1m[32m   Compiling[0m email_address v0.2.4
+[1m[32m   Compiling[0m custom_error v1.9.2
+[1m[32m   Compiling[0m temp_testdir v0.2.3
+[1m[32m   Compiling[0m lettre v0.11.7
+[1m[32m   Compiling[0m color-spantrace v0.2.1
+[1m[32m   Compiling[0m ollama-api-bindings v0.23.0 (/build/source/crates/ollama-api-bindings)
+[0m[1m[33mwarning[0m[0m[1m: elided lifetime has a name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/ollama-api-bindings/src/completion.rs:23:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    async fn generate(&self, prompt: &str, options: CompletionOptions) -> BoxStream<String> {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mlifetime `'life0` declared here[0m[0m                            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mthis elided lifetime gets resolved as `'life0`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(elided_named_lifetimes)]` on by default[0m
+
+[1m[32m   Compiling[0m aim-downloader v0.23.0 (/build/source/crates/aim-downloader)
+[1m[32m   Compiling[0m tarpc v0.33.0
+[1m[32m   Compiling[0m octocrab v0.42.1
+[1m[32m   Compiling[0m http-api-bindings v0.23.0 (/build/source/crates/http-api-bindings)
+[0m[1m[33mwarning[0m[0m[1m: elided lifetime has a name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/http-api-bindings/src/completion/llama.rs:47:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    async fn generate(&self, prompt: &str, options: CompletionOptions) -> BoxStream<String> {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mlifetime `'life0` declared here[0m[0m                            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mthis elided lifetime gets resolved as `'life0`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(elided_named_lifetimes)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: elided lifetime has a name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/http-api-bindings/src/completion/mistral.rs:70:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    async fn generate(&self, prompt: &str, options: CompletionOptions) -> BoxStream<String> {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mlifetime `'life0` declared here[0m[0m                            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mthis elided lifetime gets resolved as `'life0`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: elided lifetime has a name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/http-api-bindings/src/completion/openai.rs:67:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    async fn generate(&self, prompt: &str, options: CompletionOptions) -> BoxStream<String> {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mlifetime `'life0` declared here[0m[0m                            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mthis elided lifetime gets resolved as `'life0`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: elided lifetime has a name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/http-api-bindings/src/rate_limit.rs:63:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    async fn generate(&self, prompt: &str, options: CompletionOptions) -> BoxStream<String> {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mlifetime `'life0` declared here[0m[0m                            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mthis elided lifetime gets resolved as `'life0`[0m
+
+[1m[32m   Compiling[0m nvml-wrapper-sys v0.7.0
+[1m[32m   Compiling[0m argon2 v0.5.3
+[1m[32m   Compiling[0m metrics-exporter-prometheus v0.13.1
+[1m[32m   Compiling[0m gitlab v0.1700.1
+[1m[32m   Compiling[0m juniper_axum v0.1.0
+[1m[32m   Compiling[0m ratelimit v0.10.0
+[1m[32m   Compiling[0m opentelemetry-proto v0.27.0
+[1m[32m   Compiling[0m tabby v0.23.0 (/build/source/crates/tabby)
+[1m[32m   Compiling[0m tabby-crawler v0.23.0 (/build/source/crates/tabby-crawler)
+[0m[1m[33mwarning[0m[0m[1m: field `timestamp` is never read[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0mcrates/tabby-crawler/src/types.rs:7:9[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct KatanaRequestResponse {[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12mfield in this struct[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub timestamp: String,[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `KatanaRequestResponse` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: fields `method` and `raw` are never read[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/tabby-crawler/src/types.rs:14:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct KatanaRequest {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m-------------[0m[0m [0m[0m[1m[38;5;12mfields in this struct[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub method: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub endpoint: String,[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub raw: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `KatanaRequest` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field `technologies` is never read[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/tabby-crawler/src/types.rs:24:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct KatanaResponse {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m--------------[0m[0m [0m[0m[1m[38;5;12mfield in this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub technologies: Option<Vec<String>>,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `KatanaResponse` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis[0m
+
+[1m[33mwarning[0m[1m:[0m `tabby-crawler` (lib) generated 3 warnings
+[1m[32m   Compiling[0m which v6.0.1
+[1m[32m   Compiling[0m bincode v1.3.3
+[1m[32m   Compiling[0m tokio-retry v0.3.0
+[1m[32m   Compiling[0m tower-http v0.5.2
+[1m[31merror[0m[1m:[0m failed to run custom build command for `llama-cpp-server v0.23.0 (/build/source/crates/llama-cpp-server)`
+
+Caused by:
+  process didn't exit successfully: `/build/source/target/release/build/llama-cpp-server-12ea3f4b6ab1b7cc/build-script-build` (exit status: 101)
+  --- stdout
+  CMAKE_TOOLCHAIN_FILE_x86_64-unknown-linux-gnu = None
+  CMAKE_TOOLCHAIN_FILE_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE_TOOLCHAIN_FILE = None
+  CMAKE_TOOLCHAIN_FILE = None
+  CMAKE_GENERATOR_x86_64-unknown-linux-gnu = None
+  CMAKE_GENERATOR_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE_GENERATOR = None
+  CMAKE_GENERATOR = None
+  CMAKE_PREFIX_PATH_x86_64-unknown-linux-gnu = None
+  CMAKE_PREFIX_PATH_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE_PREFIX_PATH = None
+  CMAKE_PREFIX_PATH = None
+  CMAKE_x86_64-unknown-linux-gnu = None
+  CMAKE_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE = None
+  CMAKE = None
+  running: cd "/build/source/target/x86_64-unknown-linux-gnu/release/build/llama-cpp-server-8b49d3ce321eddfe/out/build" && CMAKE_PREFIX_PATH="" "cmake" "/build/source/crates/llama-cpp-server/./llama.cpp" "-DGGML_NATIVE=OFF" "-DGGML_NATIVE_DEFAULT=OFF" "-DBUILD_SHARED_LIBS=OFF" "-DGGML_CUDA=ON" "-DCMAKE_POSITION_INDEPENDENT_CODE=ON" "-DCMAKE_INSTALL_PREFIX=/build/source/target/x86_64-unknown-linux-gnu/release/build/llama-cpp-server-8b49d3ce321eddfe/out" "-DCMAKE_C_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64" "-DCMAKE_C_COMPILER=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc" "-DCMAKE_CXX_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64" "-DCMAKE_CXX_COMPILER=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/c++" "-DCMAKE_ASM_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64" "-DCMAKE_ASM_COMPILER=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc" "-DCMAKE_BUILD_TYPE=Release"
+  -- The C compiler identification is GNU 14.2.1
+  -- The CXX compiler identification is GNU 14.2.1
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Check for working C compiler: /nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc - skipped
+  -- Detecting C compile features
+  -- Detecting C compile features - done
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Check for working CXX compiler: /nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/c++ - skipped
+  -- Detecting CXX compile features
+  -- Detecting CXX compile features - done
+  -- Found Git: /nix/store/7mln3k7mmvsnpgp47zr63w9d60pqba9n-git-2.47.1/bin/git (found version "2.47.1")
+  -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+  -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+  -- Found Threads: TRUE
+  -- Found OpenMP_C: -fopenmp (found version "4.5")
+  -- Found OpenMP_CXX: -fopenmp (found version "4.5")
+  -- Found OpenMP: TRUE (found version "4.5")
+  -- OpenMP found
+  -- Using llamafile
+  -- Using AMX
+  -- Found CUDAToolkit: /nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/include;/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/include (found version "12.4.99")
+  -- CUDA found
+  -- Using CUDA architectures: 52;61;70;75
+  -- Configuring incomplete, errors occurred!
+
+  --- stderr
+  fatal: not a git repository (or any of the parent directories): .git
+  fatal: not a git repository (or any of the parent directories): .git
+  CMake Error at /nix/store/ylnid6s3i24l7bdzkikm09spmjhk0af9-cmake-3.31.3/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:865 (message):
+    Compiling the CUDA compiler identification source file
+    "CMakeCUDACompilerId.cu" failed.
+
+    Compiler:
+    /nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/nvcc
+
+    Build flags:
+
+    Id flags: --keep;--keep-dir;tmp -v
+
+
+
+    The output was:
+
+    1
+
+    #$ _NVVM_BRANCH_=nvvm
+
+    #$ _NVVM_BRANCH_SUFFIX_=
+
+    #$ _SPACE_=
+
+    #$ _CUDART_=cudart
+
+    #$ _HERE_=/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin
+
+    #$ _THERE_=/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin
+
+    #$ _TARGET_SIZE_=
+
+    #$ _TARGET_DIR_=
+
+    #$ _TARGET_SIZE_=64
+
+    #$ TOP=/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/..
+
+    #$
+    NVVMIR_LIBRARY_DIR=/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/nvvm/libdevice
+
+
+    #$
+    LD_LIBRARY_PATH=/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/../lib:/build/source/target/release/deps:/build/source/target/release:/nix/store/bwkxjbcbc88gj21c24n1ck199n0pm5wh-rustc-1.83.0/lib/rustlib/x86_64-unknown-linux-gnu/lib
+
+
+    #$
+    PATH=/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/nvvm/bin:/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin:/nix/store/a9n2kybksza6sn71qwqc6ac781gk9g7v-cargo-1.83.0/bin:/nix/store/857aszj4y9c9rbz5iq2ngabnkrw3x270-cargo-auditable-0.6.5/bin:/nix/store/7mln3k7mmvsnpgp47zr63w9d60pqba9n-git-2.47.1/bin:/nix/store/5im2psj9mv54aj432h5nk6xdbgpcy60n-pkg-config-wrapper-0.29.2/bin:/nix/store/r4k147v919pir4fj74in3axcbma03793-protobuf-29.2/bin:/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin:/nix/store/q4pdh7vf3bqvrnsi57qk1qpslj9mk3gw-cuda_cuobjdump-12.4.99-bin/bin:/nix/store/ylnid6s3i24l7bdzkikm09spmjhk0af9-cmake-3.31.3/bin:/nix/store/4r7a0a7mgwma0qm440f1zlhgb47hqx6i-auditable-cargo-1.83.0/bin:/nix/store/a9n2kybksza6sn71qwqc6ac781gk9g7v-cargo-1.83.0/bin:/nix/store/f10frz81pb9j2bxx3vc394cgq0y9dnyd-rustc-wrapper-1.83.0/bin:/nix/store/bl9vwzyawyad6ldhvnnp28drzjm7q0v9-patchelf-0.15.0/bin:/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin:/nix/store/gnf3mv68i5g6jmabnbbncsar3kbg13zd-gcc-14-20241116/bin:/nix/store/a17b952gdq8g179vymqxmjah0ylgwd64-glibc-2.40-36-bin/bin:/nix/store/pw26z7msfmv291jq1qpp8bbaprs5hkfk-coreutils-9.5/bin:/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin:/nix/store/a1cr17kwgakznfw4pp8paw8yv189ikk5-binutils-2.43.1/bin:/nix/store/pw26z7msfmv291jq1qpp8bbaprs5hkfk-coreutils-9.5/bin:/nix/store/pvl69q0l5fiiblvsqz3l424617b7lw89-findutils-4.10.0/bin:/nix/store/nyqfk1jvmg3dzbp0n89x7957m3qh4ks4-diffutils-3.10/bin:/nix/store/v93bdqf52x2r2lqijv0f7x3yhylwy957-gnused-4.9/bin:/nix/store/01dri6m7g4bx0kkd39pkgfpzpj3i7y86-gnugrep-3.11/bin:/nix/store/2yvf4zm225q75mkma7914f4k7i0srfmg-gawk-5.3.1/bin:/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin:/nix/store/3ixlnrilky99c34xw3w69xyx54iahwcr-gzip-1.13/bin:/nix/store/j2w0ksqpakrb7rsdnhkid5r1wxs1p79i-bzip2-1.0.8-bin/bin:/nix/store/0lrk3s24y2l74zagz13mv0n7yp8zbqzg-gnumake-4.4.1/bin:/nix/store/4fvc5fm8bszmkydng1ivrvr5cbvr1g60-bash-5.2p37/bin:/nix/store/78z7sr6w7jv856axivb9fxwivklvaivf-patch-2.7.6/bin:/nix/store/2818caib67ysbakmx87qwq4dbffln9g8-xz-5.6.3-bin/bin:/nix/store/qh8jxbp98py266w8555hx4y9qpxfrfz0-file-5.46/bin
+
+
+    #$
+    INCLUDES="-I/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/include"
+
+
+    #$ LIBRARIES=
+    "-L/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/..//lib64/stubs"
+    "-L/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/..//lib64"
+
+
+    #$ CUDAFE_FLAGS=
+
+    #$ PTXAS_FLAGS=
+
+    #$
+    PATH="/nix/store/5xxsgsypi8a31glic5p8wmqx6ilipiw6-gcc-wrapper-13.3.0/bin":/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/nvvm/bin:/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin:/nix/store/a9n2kybksza6sn71qwqc6ac781gk9g7v-cargo-1.83.0/bin:/nix/store/857aszj4y9c9rbz5iq2ngabnkrw3x270-cargo-auditable-0.6.5/bin:/nix/store/7mln3k7mmvsnpgp47zr63w9d60pqba9n-git-2.47.1/bin:/nix/store/5im2psj9mv54aj432h5nk6xdbgpcy60n-pkg-config-wrapper-0.29.2/bin:/nix/store/r4k147v919pir4fj74in3axcbma03793-protobuf-29.2/bin:/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin:/nix/store/q4pdh7vf3bqvrnsi57qk1qpslj9mk3gw-cuda_cuobjdump-12.4.99-bin/bin:/nix/store/ylnid6s3i24l7bdzkikm09spmjhk0af9-cmake-3.31.3/bin:/nix/store/4r7a0a7mgwma0qm440f1zlhgb47hqx6i-auditable-cargo-1.83.0/bin:/nix/store/a9n2kybksza6sn71qwqc6ac781gk9g7v-cargo-1.83.0/bin:/nix/store/f10frz81pb9j2bxx3vc394cgq0y9dnyd-rustc-wrapper-1.83.0/bin:/nix/store/bl9vwzyawyad6ldhvnnp28drzjm7q0v9-patchelf-0.15.0/bin:/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin:/nix/store/gnf3mv68i5g6jmabnbbncsar3kbg13zd-gcc-14-20241116/bin:/nix/store/a17b952gdq8g179vymqxmjah0ylgwd64-glibc-2.40-36-bin/bin:/nix/store/pw26z7msfmv291jq1qpp8bbaprs5hkfk-coreutils-9.5/bin:/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin:/nix/store/a1cr17kwgakznfw4pp8paw8yv189ikk5-binutils-2.43.1/bin:/nix/store/pw26z7msfmv291jq1qpp8bbaprs5hkfk-coreutils-9.5/bin:/nix/store/pvl69q0l5fiiblvsqz3l424617b7lw89-findutils-4.10.0/bin:/nix/store/nyqfk1jvmg3dzbp0n89x7957m3qh4ks4-diffutils-3.10/bin:/nix/store/v93bdqf52x2r2lqijv0f7x3yhylwy957-gnused-4.9/bin:/nix/store/01dri6m7g4bx0kkd39pkgfpzpj3i7y86-gnugrep-3.11/bin:/nix/store/2yvf4zm225q75mkma7914f4k7i0srfmg-gawk-5.3.1/bin:/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin:/nix/store/3ixlnrilky99c34xw3w69xyx54iahwcr-gzip-1.13/bin:/nix/store/j2w0ksqpakrb7rsdnhkid5r1wxs1p79i-bzip2-1.0.8-bin/bin:/nix/store/0lrk3s24y2l74zagz13mv0n7yp8zbqzg-gnumake-4.4.1/bin:/nix/store/4fvc5fm8bszmkydng1ivrvr5cbvr1g60-bash-5.2p37/bin:/nix/store/78z7sr6w7jv856axivb9fxwivklvaivf-patch-2.7.6/bin:/nix/store/2818caib67ysbakmx87qwq4dbffln9g8-xz-5.6.3-bin/bin:/nix/store/qh8jxbp98py266w8555hx4y9qpxfrfz0-file-5.46/bin
+
+
+    #$ LIBRARIES=
+    "-L/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/..//lib64/stubs"
+    "-L/nix/store/r2n91rb45qzpzrqb98036zzs0801qsmr-cuda-merged-12.4/bin/..//lib64""-L/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/nvvm/lib"
+
+
+    #$
+    INCLUDES="-I/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/include"
+    "-I/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/nvvm/include"
+
+
+    #$ rm tmp/a_dlink.reg.c
+
+    #$ gcc -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__
+    -D__NVCC__
+    "-I/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/include"
+    "-I/nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/nvvm/include"
+    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=4
+    -D__CUDACC_VER_BUILD__=99 -D__CUDA_API_VER_MAJOR__=12
+    -D__CUDA_API_VER_MINOR__=4 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include
+    "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o
+    "tmp/CMakeCUDACompilerId.cpp4.ii"
+
+    In file included from
+    /nix/store/syv62hv92c69vy2wvsy63xvvp64jp2rf-cuda_cudart-12.4.99-dev/include/cuda_runtime.h:82,
+
+
+                     from <command-line>:
+
+    
+    /nix/store/3x9bfp3l67y1rwfiara8z9nwvbjf1bmz-cuda_nvcc-12.4.99/include/crt/host_config.h:143:2:
+    error: #error -- unsupported GNU version! gcc versions later than 13 are
+    not supported! The nvcc flag '-allow-unsupported-compiler' can be used to
+    override this version check; however, using an unsupported host compiler
+    may cause compilation failure or incorrect run time execution.  Use at your
+    own risk.
+
+      143 | #error -- unsupported GNU version! gcc versions later than 13 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+          |  ^~~~~
+
+    # --error 0x1 --
+
+
+
+
+
+  Call Stack (most recent call first):
+    /nix/store/ylnid6s3i24l7bdzkikm09spmjhk0af9-cmake-3.31.3/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)
+    /nix/store/ylnid6s3i24l7bdzkikm09spmjhk0af9-cmake-3.31.3/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)
+    /nix/store/ylnid6s3i24l7bdzkikm09spmjhk0af9-cmake-3.31.3/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)
+    ggml/src/CMakeLists.txt:321 (enable_language)
+
+
+  thread 'main' panicked at /build/cargo-vendor-dir/cmake-0.1.50/src/lib.rs:1098:5:
+
+  command did not execute successfully, got: exit status: 1
+
+  build script failed, must exit now
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[1m[33mwarning[0m[1m:[0m build failed, waiting for other jobs to finish...
+[1m[33mwarning[0m[1m:[0m `ollama-api-bindings` (lib) generated 1 warning
+[1m[33mwarning[0m[1m:[0m `http-api-bindings` (lib) generated 4 warnings
+[1m[33mwarning[0m[1m:[0m `tabby-inference` (lib) generated 1 warning
+[1m[33mwarning[0m[1m:[0m `tabby-common` (lib) generated 1 warning
