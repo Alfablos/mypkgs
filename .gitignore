@@ -1,0 +1,7 @@
+Caddyfile
+markdown.html
+*.log
+
+# temporary
+*.html
+
