@@ -15,13 +15,16 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
       in
       {
-        packages.default = self.packages.${system}.tabby;
+        packages.default = self.packages.${system}.ompweb;
 
         packages.posting = pkgs.callPackage ./posting.nix { };
-        
+
         packages.ompweb = pkgs.callPackage ./ompweb.nix { };
       }
     );
