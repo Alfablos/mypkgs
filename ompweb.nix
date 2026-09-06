@@ -77,7 +77,7 @@ buildNpmPackage (finalAttrs: {
     owner = "kahme247";
     repo = "ompweb";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-AGT8RTb2W7ujnClB76i1wN9SplbWq8WMhjPXry3Qa6A=";
+    hash = "sha256-y6kCF7vE8w3boCq3KO83YmyL6Z6tEW+7epybY1dmFH8=";
   };
   patches = [ localFontsPatch ];
 
@@ -88,7 +88,7 @@ buildNpmPackage (finalAttrs: {
     cp ${notoSerifSC} app/fonts/NotoSerifSC-VF.otf
   '';
 
-  npmDepsHash = "sha256-ORU5C2m/RIJgrb8R8bqRi6ChYLTWP5Qy/P/k2WtSGX4=";
+  npmDepsHash = "sha256-IDwkjufyFC8/peH0vPnXK2xkWaZXyjYbsgizP54ZGzA=";
 
   # The prepack script runs the build script, which we'd rather do in the build phase.
   npmPackFlags = [ "--ignore-scripts" ];
