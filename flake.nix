@@ -26,6 +26,8 @@
         packages.posting = pkgs.callPackage ./posting.nix { };
 
         packages.ompweb = pkgs.callPackage ./ompweb.nix { };
+
+        packages.graft = pkgs.callPackage ./graft.nix { };
       }
     );
 }
