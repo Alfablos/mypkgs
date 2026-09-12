@@ -25,16 +25,50 @@ let
     hash = "sha256-cbTT3tLZD/Q7t1pOSM2+Fw8LjVSG3In/h/KhcotW2mQ=";
   };
 
+  jetBrainsMono = fetchurl {
+    name = "JetBrainsMono.ttf";
+    url = "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/v2.304/fonts/variable/JetBrainsMono%5Bwght%5D.ttf";
+    hash = "sha256-ZioZbVjxGDvy13QottUoP+P0UWGrAhvqQDa8mOXKwBY=";
+  };
+
+  geist = fetchurl {
+    name = "Geist.ttf";
+    url = "https://raw.githubusercontent.com/vercel/geist-font/v1.7.2/fonts/Geist/variable/Geist%5Bwght%5D.ttf";
+    hash = "sha256-c4lOBEjK6QqStsL4cyt7uay3uUxBi/9Vna1KGOHellk=";
+  };
+
   localFontsPatch = writeText "ompweb-local-fonts.patch" ''
     diff --git a/app/layout.tsx b/app/layout.tsx
     --- a/app/layout.tsx
     +++ b/app/layout.tsx
-    @@ -1,27 +1,27 @@
+    @@ -1,44 +1,45 @@
      import type { Metadata, Viewport } from "next";
-    -import { Noto_Sans_Mono, Noto_Serif_SC, Source_Serif_4 } from "next/font/google";
+     import Script from "next/script";
+    -import { Geist, JetBrains_Mono, Noto_Sans_Mono, Noto_Serif_SC, Source_Serif_4 } from "next/font/google";
     +import localFont from "next/font/local";
+     import { ThemeColor } from "@/hooks/useTheme";
+     import { SIDEBAR_HISTORY_BRIDGE_SCRIPT } from "@/lib/sidebar-history-bridge";
      import "./globals.css";
-     
+
+    -const geist = Geist({
+    -  subsets: ["latin"],
+    +const geist = localFont({
+    +  src: "./fonts/Geist.ttf",
+    +  weight: "100 900",
+       variable: "--font-geist",
+       display: "swap",
+     });
+
+    -const jetbrainsMono = JetBrains_Mono({
+    -  subsets: ["latin"],
+    -  weight: ["400", "500", "600"],
+    +const jetbrainsMono = localFont({
+    +  src: "./fonts/JetBrainsMono.ttf",
+    +  weight: "100 800",
+       variable: "--font-jb-mono",
+       display: "swap",
+     });
+
     -const notoSansMono = Noto_Sans_Mono({
     -  subsets: ["latin", "cyrillic"],
     +const notoSansMono = localFont({
@@ -43,7 +77,7 @@ let
        variable: "--font-noto-mono",
        display: "swap",
      });
-     
+
      // Display serif pair for the warm-humanistic heading voice: Source Serif 4
      // covers latin, Noto Serif SC covers CJK. Both expose CSS variables consumed
      // by --font-serif in globals.css.
@@ -55,7 +89,7 @@ let
        variable: "--font-source-serif",
        display: "swap",
      });
-     
+
     -const notoSerifSC = Noto_Serif_SC({
     -  // CJK glyphs are served via unicode-range slices regardless of subset;
     -  // "latin" satisfies next/font's preloading requirement.
@@ -67,17 +101,18 @@ let
        variable: "--font-noto-serif",
        display: "swap",
      });
+
   '';
 in
 buildNpmPackage (finalAttrs: {
   pname = "ompweb";
-  version = "0.4.2";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "kahme247";
     repo = "ompweb";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-AGT8RTb2W7ujnClB76i1wN9SplbWq8WMhjPXry3Qa6A=";
+    hash = "sha256-5DtIRP00CMS8nXaNOOe5vEo/ToVLfBQ1kkb1g/1cuCg=";
   };
   patches = [ localFontsPatch ];
 
@@ -86,9 +121,11 @@ buildNpmPackage (finalAttrs: {
     cp ${notoSansMono} app/fonts/NotoSansMono.ttf
     cp ${sourceSerif} app/fonts/SourceSerif4Variable-Roman.otf
     cp ${notoSerifSC} app/fonts/NotoSerifSC-VF.otf
+    cp ${jetBrainsMono} app/fonts/JetBrainsMono.ttf
+    cp ${geist} app/fonts/Geist.ttf
   '';
 
-  npmDepsHash = "sha256-ORU5C2m/RIJgrb8R8bqRi6ChYLTWP5Qy/P/k2WtSGX4=";
+  npmDepsHash = "sha256-3oF6aA3/KxJTRC0ONX4ztG5s13b+IJqIHk1u4LVT1GQ=";
 
   # The prepack script runs the build script, which we'd rather do in the build phase.
   npmPackFlags = [ "--ignore-scripts" ];
