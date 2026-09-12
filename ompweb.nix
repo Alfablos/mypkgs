@@ -127,10 +127,7 @@ buildNpmPackage (finalAttrs: {
 
   npmDepsHash = "sha256-3oF6aA3/KxJTRC0ONX4ztG5s13b+IJqIHk1u4LVT1GQ=";
 
-  # The prepack script runs the build script, which we'd rather do in the build phase.
   npmPackFlags = [ "--ignore-scripts" ];
-
-  # NODE_OPTIONS = "--openssl-legacy-provider";
 
   meta = {
     description = "Local web UI for the oh-my-pi (omp) coding agent";
