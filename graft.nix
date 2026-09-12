@@ -11,7 +11,7 @@ buildNpmPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "trailhq";
     repo = "Graft";
-    tag = finalAttrs.version;
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ylWiVycjkq8twq3PsEprVdJyUbZUDRQNH/a5JC0W98A=";
   };
 
