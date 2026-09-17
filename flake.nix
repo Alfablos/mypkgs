@@ -26,8 +26,11 @@
         packages.posting = pkgs.callPackage ./posting.nix { };
 
         packages.ompweb = pkgs.callPackage ./ompweb.nix { };
+        packages.ompweb-latest = pkgs.callPackage ./ompweb-latest.nix { };
 
         packages.graft = pkgs.callPackage ./graft.nix { };
+
+        packages.openKnowledgeDesktop = pkgs.callPackage ./openknowledge/desktop.nix { };
       }
     );
 }
