@@ -31,6 +31,8 @@
         packages.graft = pkgs.callPackage ./graft.nix { };
 
         packages.openKnowledgeDesktop = pkgs.callPackage ./openknowledge/desktop.nix { };
+
+        packages.openKnowledgeCli = pkgs.callPackage ./openknowledge/cli.nix { };
       }
     );
 }
