@@ -41,12 +41,13 @@ let
     diff --git a/app/layout.tsx b/app/layout.tsx
     --- a/app/layout.tsx
     +++ b/app/layout.tsx
-    @@ -1,44 +1,45 @@
+    @@ -1,45 +1,46 @@
      import type { Metadata, Viewport } from "next";
      import Script from "next/script";
     -import { Geist, JetBrains_Mono, Noto_Sans_Mono, Noto_Serif_SC, Source_Serif_4 } from "next/font/google";
     +import localFont from "next/font/local";
      import { ThemeColor } from "@/hooks/useTheme";
+     import { IosFocusZoomGuard } from "@/components/IosFocusZoomGuard";
      import { SIDEBAR_HISTORY_BRIDGE_SCRIPT } from "@/lib/sidebar-history-bridge";
      import "./globals.css";
 
@@ -106,13 +107,13 @@ let
 in
 buildNpmPackage (finalAttrs: {
   pname = "ompweb";
-  version = "0.5.0";
+  version = "0.5.1";
 
   src = fetchFromGitHub {
     owner = "kahme247";
     repo = "ompweb";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-5DtIRP00CMS8nXaNOOe5vEo/ToVLfBQ1kkb1g/1cuCg=";
+    hash = "sha256-zmn+YuIfiRf06M37hGYJcglv5T1t19Mtejno13/e+Kk=";
   };
   patches = [ localFontsPatch ];
 
@@ -125,7 +126,7 @@ buildNpmPackage (finalAttrs: {
     cp ${geist} app/fonts/Geist.ttf
   '';
 
-  npmDepsHash = "sha256-3oF6aA3/KxJTRC0ONX4ztG5s13b+IJqIHk1u4LVT1GQ=";
+  npmDepsHash = "sha256-HxT+m6bI0I3t9sqsSgHun6oXve3WtIEmkFpCoBplrC4=";
 
   npmPackFlags = [ "--ignore-scripts" ];
 
