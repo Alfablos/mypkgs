@@ -6,16 +6,16 @@
 }:
 buildNpmPackage (finalAttrs: {
   pname = "graft";
-  version = "0.18.0";
+  version = "0.21.1";
 
   src = fetchFromGitHub {
     owner = "trailhq";
     repo = "Graft";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-ylWiVycjkq8twq3PsEprVdJyUbZUDRQNH/a5JC0W98A=";
+    hash = "sha256-fop4YQ0uCGEmrqW6Wm35q0dlmBZMzMcVbMJkruIhnEY=";
   };
 
-  npmDepsHash = "sha256-HLU+L4pIWA/07Zh9pcVEQuhR1s3L+hzJ0LBGG2AX568=";
+  npmDepsHash = "sha256-7iC2xhQcWnMYU+XicC44UFwsDYgKC5ZUWHK6c6/ecVc=";
 
   postPatch = ''
     substituteInPlace package.json \
