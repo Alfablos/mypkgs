@@ -3,7 +3,6 @@
   buildNpmPackage,
   fetchFromGitHub,
   fetchurl,
-  writeText,
   ...
 }:
 let
@@ -37,73 +36,6 @@ let
     hash = "sha256-c4lOBEjK6QqStsL4cyt7uay3uUxBi/9Vna1KGOHellk=";
   };
 
-  localFontsPatch = writeText "ompweb-local-fonts.patch" ''
-    diff --git a/app/layout.tsx b/app/layout.tsx
-    --- a/app/layout.tsx
-    +++ b/app/layout.tsx
-    @@ -1,45 +1,46 @@
-     import type { Metadata, Viewport } from "next";
-     import Script from "next/script";
-    -import { Geist, JetBrains_Mono, Noto_Sans_Mono, Noto_Serif_SC, Source_Serif_4 } from "next/font/google";
-    +import localFont from "next/font/local";
-     import { ThemeColor } from "@/hooks/useTheme";
-     import { IosFocusZoomGuard } from "@/components/IosFocusZoomGuard";
-     import { SIDEBAR_HISTORY_BRIDGE_SCRIPT } from "@/lib/sidebar-history-bridge";
-     import "./globals.css";
-
-    -const geist = Geist({
-    -  subsets: ["latin"],
-    +const geist = localFont({
-    +  src: "./fonts/Geist.ttf",
-    +  weight: "100 900",
-       variable: "--font-geist",
-       display: "swap",
-     });
-
-    -const jetbrainsMono = JetBrains_Mono({
-    -  subsets: ["latin"],
-    -  weight: ["400", "500", "600"],
-    +const jetbrainsMono = localFont({
-    +  src: "./fonts/JetBrainsMono.ttf",
-    +  weight: "100 800",
-       variable: "--font-jb-mono",
-       display: "swap",
-     });
-
-    -const notoSansMono = Noto_Sans_Mono({
-    -  subsets: ["latin", "cyrillic"],
-    +const notoSansMono = localFont({
-    +  src: "./fonts/NotoSansMono.ttf",
-    +  weight: "100 900",
-       variable: "--font-noto-mono",
-       display: "swap",
-     });
-
-     // Display serif pair for the warm-humanistic heading voice: Source Serif 4
-     // covers latin, Noto Serif SC covers CJK. Both expose CSS variables consumed
-     // by --font-serif in globals.css.
-    -const sourceSerif = Source_Serif_4({
-    -  subsets: ["latin"],
-    +const sourceSerif = localFont({
-    +  src: "./fonts/SourceSerif4Variable-Roman.otf",
-    +  weight: "200 900",
-       variable: "--font-source-serif",
-       display: "swap",
-     });
-
-    -const notoSerifSC = Noto_Serif_SC({
-    -  // CJK glyphs are served via unicode-range slices regardless of subset;
-    -  // "latin" satisfies next/font's preloading requirement.
-    -  subsets: ["latin"],
-    -  weight: ["600", "700"],
-    +const notoSerifSC = localFont({
-    +  src: "./fonts/NotoSerifSC-VF.otf",
-    +  weight: "200 900",
-       variable: "--font-noto-serif",
-       display: "swap",
-     });
-
-  '';
 in
 buildNpmPackage (finalAttrs: {
   pname = "ompweb";
@@ -115,7 +47,9 @@ buildNpmPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-zmn+YuIfiRf06M37hGYJcglv5T1t19Mtejno13/e+Kk=";
   };
-  patches = [ localFontsPatch ];
+  # Regenerate against the fetched source with: git diff -U1 -- app/layout.tsx
+  # Keep font changes in separate hunks to avoid unrelated import churn.
+  patches = [ ./ompweb-local-fonts.patch ];
 
   postPatch = ''
     mkdir -p app/fonts

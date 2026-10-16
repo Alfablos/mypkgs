@@ -18,12 +18,6 @@ let
     hash = "sha256-hntzxqlUpKZGFpBtF5+UVyp0h5Ch0CLr7v8H9W6gIho=";
   };
 
-  notoSerifSC = fetchurl {
-    name = "NotoSerifSC-VF.otf";
-    url = "https://raw.githubusercontent.com/notofonts/noto-cjk/Serif2.003/Serif/Variable/OTF/Subset/NotoSerifSC-VF.otf";
-    hash = "sha256-cbTT3tLZD/Q7t1pOSM2+Fw8LjVSG3In/h/KhcotW2mQ=";
-  };
-
   jetBrainsMono = fetchurl {
     name = "JetBrainsMono.ttf";
     url = "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/v2.304/fonts/variable/JetBrainsMono%5Bwght%5D.ttf";
@@ -45,7 +39,7 @@ buildNpmPackage (finalAttrs: {
     owner = "kahme247";
     repo = "ompweb";
     rev = "main";
-    hash = "sha256-gNbngtSKrUIFCBWZ2Se53ch5XJtBkeMX3omunNfmfrs=";
+    hash = "sha256-jISkHtTWLEokO0lJxNgNv4eqK4wpdcioDUMQLVv1E9k=";
   };
   # Regenerate against the fetched source with: git diff -U1 -- app/layout.tsx
   # Keep font changes in separate hunks to avoid unrelated import churn.
@@ -55,13 +49,12 @@ buildNpmPackage (finalAttrs: {
     mkdir -p app/fonts
     cp ${notoSansMono} app/fonts/NotoSansMono.ttf
     cp ${sourceSerif} app/fonts/SourceSerif4Variable-Roman.otf
-    cp ${notoSerifSC} app/fonts/NotoSerifSC-VF.otf
     cp ${jetBrainsMono} app/fonts/JetBrainsMono.ttf
     cp ${geist} app/fonts/Geist.ttf
   '';
 
   # npmDepsHash = lib.fakeHash;
-  npmDepsHash = "sha256-HxT+m6bI0I3t9sqsSgHun6oXve3WtIEmkFpCoBplrC4=";
+  npmDepsHash = "sha256-sWlf6K96SKtjdaX5EWwoIT28r46QM17hd/o0qW8hSyY=";
 
   npmPackFlags = [ "--ignore-scripts" ];
 
