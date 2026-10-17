@@ -5,12 +5,12 @@
   ...
 }:
 buildNpmPackage (finalAttrs: {
-  pname = "graft";
+  pname = "trail-code";
   version = "0.21.1";
 
   src = fetchFromGitHub {
     owner = "trailhq";
-    repo = "Graft";
+    repo = "Trail-Code";
     tag = "v${finalAttrs.version}";
     hash = "sha256-fop4YQ0uCGEmrqW6Wm35q0dlmBZMzMcVbMJkruIhnEY=";
   };
