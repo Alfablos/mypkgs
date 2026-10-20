@@ -33,13 +33,13 @@ let
 in
 buildNpmPackage (finalAttrs: {
   pname = "ompweb";
-  version = "0.5.1";
+  version = "0.5.2-unstable-2026-10-19";
 
   src = fetchFromGitHub {
     owner = "kahme247";
     repo = "ompweb";
-    rev = "main";
-    hash = "sha256-jISkHtTWLEokO0lJxNgNv4eqK4wpdcioDUMQLVv1E9k=";
+    rev = "351237d7ec77249600af4d3c4747855a8373e39e";
+    hash = "sha256-C4nblOT5PntQodFVPXuzgLFnHfFChfGOkTe6KcUwJYc=";
   };
   # Regenerate against the fetched source with: git diff -U1 -- app/layout.tsx
   # Keep font changes in separate hunks to avoid unrelated import churn.
@@ -53,7 +53,6 @@ buildNpmPackage (finalAttrs: {
     cp ${geist} app/fonts/Geist.ttf
   '';
 
-  # npmDepsHash = lib.fakeHash;
   npmDepsHash = "sha256-sWlf6K96SKtjdaX5EWwoIT28r46QM17hd/o0qW8hSyY=";
 
   npmPackFlags = [ "--ignore-scripts" ];
